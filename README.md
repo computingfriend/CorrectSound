@@ -28,6 +28,10 @@ zk-SNARK proofs are used to quickly verify proofs that have been thoroughly chec
 Always secure. No arbitrary code execution. 🔐
 
 # License
-The project is licensed under GNU General Public License 3.
+The project is licensed under GNU General Public License 3. 🌊
 
-This is an end product, not a library. Modifications to this product must also be released as free and open source software. Because of these reasons, GPL is the most appropriate license for this project.
+This is an end product, not a library. 📚
+
+Modifications to this product must also be released as free and open source software. 🔥
+
+Because of these reasons, GPL is the most appropriate license for this project. 🎊
