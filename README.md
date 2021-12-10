@@ -4,7 +4,7 @@ CorrectSound: Efficient and User Friendly Proof Verification System for Mere Mor
 # Goals
 Develop an easy to use proof verification system. 🏖️
 
-Never sacrifice on soundness. 🐞
+Never compromise on soundness. 🐞
 
 Source code must be easy to read by an average programmer. 🙆‍♀️
 
