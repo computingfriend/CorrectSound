@@ -1,0 +1,31 @@
+{
+  "devDependencies": {
+    "@swc/cli": "^0.1.53",
+    "@swc/core": "^1.2.119",
+    "@ava/typescript": "^2.0.0",
+    "ava": "^3.15.0",
+    "esm": "^3.2.25"
+  },
+  "dependencies": {},
+  "scripts": {
+    "build": "swc ./src/ -d output"
+  },
+  "ava": {
+    "typescript": {
+      "extensions": [
+        "ts",
+        "tsx"
+      ],
+      "rewritePaths": {
+        "src/": "output/"
+      },
+      "compile": false
+    },
+    "files": [
+      "**/tests/*"
+    ],
+    "require": [
+      "esm"
+    ]
+  }
+}

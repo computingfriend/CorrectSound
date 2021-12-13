@@ -1,4 +1,5 @@
 # 🎃 Syntax
+
 CorrectSound proofs are written in JavaScript syntax. 💕
 
 CorrectSound doesn't have its own parser. It reuses the [acorn](https://github.com/acornjs/acorn) parser. 🍄
