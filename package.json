@@ -1,20 +1,23 @@
 {
   "devDependencies": {
+    "@ava/typescript": "^2.0.0",
+    "@stryker-mutator/core": "^5.5.1",
     "@swc/cli": "^0.1.53",
     "@swc/core": "^1.2.119",
-    "@ava/typescript": "^2.0.0",
     "ava": "^3.15.0",
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "npm-run-all": "^4.1.5",
+    "stryker-cli": "^1.0.2"
   },
-  "dependencies": {},
   "scripts": {
-    "build": "swc ./src/ -d output"
+    "build": "swc ./src/ -d output",
+    "test-without-build": "ava --verbose --timeout=60s",
+    "test": "run-s build test-without-build"
   },
   "ava": {
     "typescript": {
       "extensions": [
-        "ts",
-        "tsx"
+        "ts"
       ],
       "rewritePaths": {
         "src/": "output/"
@@ -22,7 +25,7 @@
       "compile": false
     },
     "files": [
-      "**/tests/*"
+      "src/**/tests/*"
     ],
     "require": [
       "esm"

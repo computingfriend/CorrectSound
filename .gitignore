@@ -1,2 +1,8 @@
 node_modules
 output
+
+# stryker temp files
+.stryker-tmp
+
+stryker.log
+reports

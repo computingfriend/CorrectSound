@@ -53,7 +53,7 @@ const performTest = ({
 
       depth--;
 
-      const variant = BigInt((Math.random() * 6) | 0);
+      const variant = BigInt((Math.random() * 7) | 0);
 
       if (variant === 0n)
         return {
@@ -89,6 +89,12 @@ const performTest = ({
         };
 
       if (variant === 5n)
+        return {
+          type: "not",
+          content: generate(),
+        };
+
+      if (variant === 6n)
         return {
           type: "member",
           variable1: generateVariable(),
@@ -162,17 +168,21 @@ const performTest = ({
 // All these tests are identical but the parameters are different.
 
 test("check if serializeSentence works correctly (1)", (t) => {
+  t.timeout(60000);
+
   performTest({
     depthUpperBound: 32n,
     indexUpperBound: 32n,
     setSize: 2000n,
-    iterationCount: 250n,
+    iterationCount: 25n,
   });
 
   t.pass();
 });
 
 test("check if serializeSentence works correctly (2)", (t) => {
+  t.timeout(60000);
+
   performTest({
     depthUpperBound: 5n,
     indexUpperBound: 5n,
@@ -184,10 +194,25 @@ test("check if serializeSentence works correctly (2)", (t) => {
 });
 
 test("check if serializeSentence works correctly (3)", (t) => {
+  t.timeout(60000);
+
   performTest({
     depthUpperBound: 20n,
     indexUpperBound: 15n,
     setSize: 1000n,
+    iterationCount: 200n,
+  });
+
+  t.pass();
+});
+
+test("check if serializeSentence works correctly (4)", (t) => {
+  t.timeout(60000);
+
+  performTest({
+    depthUpperBound: 3n,
+    indexUpperBound: 2n,
+    setSize: 2000n,
     iterationCount: 200n,
   });
 

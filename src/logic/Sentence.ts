@@ -7,7 +7,7 @@ type Sentence =
       right: Sentence;
     }
   | {
-      type: "forall" | "exists";
+      type: "forall" | "exists" | "not";
       content: Sentence;
     }
   | {

@@ -48,6 +48,10 @@ const serializeSentence = (sentence: Sentence): string => {
     return "∃ _, " + serializeSentence(sentence.content);
   }
 
+  if (sentence.type === "not") {
+    return "¬" + serializeSentence(sentence.content);
+  }
+
   if (sentence.type === "member") {
     const serializeVariable = (variable: Variable) => {
       if (variable.type === "bound") return variable.relativeIndex.toString();
@@ -61,4 +65,4 @@ const serializeSentence = (sentence: Sentence): string => {
   }
 };
 
-export default serializeSentence
+export default serializeSentence;
